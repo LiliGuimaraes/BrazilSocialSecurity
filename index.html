@@ -6,79 +6,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <div class="container">
+    <form>
+        <div class="border border-light p-5">
+            <div class="card">
+                <h3 class="card-header info-color white-text text-center py-4">
+                    Preencha os campos com seus dados
+                </h3>
+                <div class="form-check" id="gender">
 
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Não ta entendendo nada das novas regras da Previdência?</h1>
-                <p class="lead">Calma, a gente vai te ajudar a compreender.</p>
-                <p>Informe aqui seu perfil e te entregamos tudo o que você precisa saber</p>
-            </div>
-        </div>
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                    <label class="form-check-label">
+                        MASCULINO
+                    </label>
 
-        <div class="card">
-            <h3 class="card-header info-color white-text text-center py-4">
-                <strong>Preencha os campos com seus dados</strong>
-            </h3>
+                    <input style="margin-right:20px" class="form-check-input" type="radio" name="gender" id="female"
+                        value="female" checked>
+                    <label class="form-check-label">
+                        FEMININO
+                    </label>
+                </div>
 
-            <div class="border border-light p-5">
-                <div id="gender">
-                    <div class="form-check" id="gender">
-
-                        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                        <label class="form-check-label">
-                            MASCULINO
-                        </label>
-
-                        <input class="form-check-input" type="radio" name="gender" id="female" value="female" checked>
-                        <label class="form-check-label">
-                            FEMININO
-                        </label>
+                <div>
+                    <label for="data">Data de Nascimento:</label>
+                    <input type="date" name="data" id="data" class="form-control">
+                </div>
+                <p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label for="idade" class="input-group-text" id="inputGroup-sizing-default">Idade:</label>
+                        </div>
+                        <input value='65' type="num" name="idade" id="idade" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
-                    <div>
-                        <label for="data">Data de Nascimento:</label>
-                        <input type="date" name="data" id="data" class="form-control">
-                    </div>
+                </p>
+                <div class="form-group">
+                    <label>
+                        Em qual dessas profissões abaixo você se encaixa?
+                    </label>
+                    <select class="form-control" name="categorie" id="categorie">
+                        <option value="private">Privado</option>
+                        <option value="public">Público</option>
+                        <option value="isRuralWorker">Trabalhador rural.</option>
+                        <option value="isTeacher">Professor(a).</option>
+                        <option value="isPoliceOfficer">Policial</option>
+                        <option value="isPrisionalAgent">Agente Penitenciário ou SocioEducativo</option>
+                    </select>
+                </div>
 
-                    <div>
-                        <label for="idade">Idade:</label>
-                        <input value='65' type="num" name="idade" id="idade" class="form-control" placeholder="Idade" disabled>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Tempo de serviço se for
+                            policial:</span>
                     </div>
-                    </br>
-                    <div class="form-group">
-                        <label>
-                            Em qual dessas profissões abaixo você se encaixa?
-                        </label>
-                        <select class="form-control" name="categorie" id="categorie">
-                            <option value="private">Privado</option>
-                            <option value="public">Público</option>
-                            <option value="isRuralWorker">Trabalhador rural.</option>
-                            <option value="isTeacher">Professor(a).</option>
-                            <option value="isPoliceOfficer">Policial</option>
-                            <option value="isPrisionalAgent">Agente Penitenciário ou SocioEducativo</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <h4> Tempo de serviço se for policial:</h4>
-                        <input value="15" type="num" name="serviceOfficer" id="serviceOfficer">
-                    </div>
-
-                    <button class="btn btn-primary" onclick="MyButton()">Me ensine</button>
-                    <div id="resume">
-                        <h3></h3>
+                    <input value="15" type="num" name="serviceOfficer" id="serviceOfficer" class="form-control"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <p>
+                    <button onclick="MyButton()" class="btn btn-primary" type="button" data-toggle="collapse"
+                        data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Me ensine
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div id="resume" class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                        proident.
                     </div>
                 </div>
+
             </div>
         </div>
+    </form>
 </body>
 <script type="text/javascript" src="js/main.js"></script>
 
